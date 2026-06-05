@@ -1,0 +1,54 @@
+pip install uv
+
+mkdir nlp_lab1 && cd nlp_lab1
+uv init
+uv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # Mac/Linux
+
+uv add dvc mlflow fastapi uvicorn rank-bm25 scikit-learn nltk gensim pandas numpy matplotlib seaborn python-dotenv
+pip freeze > requirements.txt
+
+git init
+dvc init
+git add .
+git commit -m "project scaffold"
+
+mkdir data
+mkdir data\raw
+mkdir data\processed
+mkdir models
+mkdir notebooks
+mkdir src
+mkdir api
+
+New-Item src\__init__.py
+New-Item src\preprocessor.py
+New-Item src\vectorizer.py
+New-Item src\classifier.py
+New-Item src\search_engine.py
+New-Item api\main.py
+
+dvc init
+git add .
+git commit -m "project scaffold"
+
+git remote set-url origin https://github.com/abdelkoudos/nlp-lab1.git
+git branch -M main
+git push -u origin main
+
+git remote set-url origin https://github.com/abdelkoudos/nlp-lab1.git
+git push -u https://abdelkoudos@github.com/abdelkoudos/nlp-lab1.git main
+
+
+uv add kaggle
+kaggle datasets download -d kazanova/sentiment140 -p data\raw --unzip
+kaggle datasets download -d snap/amazon-fine-food-reviews -p data\raw --unzip
+
+
+dvc add data\raw\Reviews.csv
+dvc add data\raw\training.1600000.processed.noemoticon.csv
+
+git add .
+git commit -m "add raw datasets, DVC tracking"
+git push -u https://abdelkoudos@github.com/abdelkoudos/nlp-lab1.git main
