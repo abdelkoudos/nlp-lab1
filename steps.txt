@@ -52,3 +52,7 @@ dvc add data\raw\training.1600000.processed.noemoticon.csv
 git add .
 git commit -m "add raw datasets, DVC tracking"
 git push -u https://abdelkoudos@github.com/abdelkoudos/nlp-lab1.git main
+
+git add .
+git commit -m "preprocessing pipeline"
+git push
