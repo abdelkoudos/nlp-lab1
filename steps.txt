@@ -29,6 +29,11 @@ New-Item src\classifier.py
 New-Item src\search_engine.py
 New-Item api\main.py
 
+echo "steps.txt" >> .gitignore
+git add .gitignore
+git commit -m "ignore steps.txt"
+git push
+
 dvc init
 git add .
 git commit -m "project scaffold"
@@ -53,6 +58,8 @@ git add .
 git commit -m "add raw datasets, DVC tracking"
 git push -u https://abdelkoudos@github.com/abdelkoudos/nlp-lab1.git main
 
-git add .
-git commit -m "preprocessing pipeline"
+dvc add data\raw\database.sqlite
+git rm -r --cached data\raw\database.sqlite
+git add data\raw\database.sqlite.dvc .gitignore
+git commit -m "track large files with DVC"
 git push
