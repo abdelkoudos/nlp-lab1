@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/DELL/Desktop/nlp lab1/mlruns/515283672453233651/models/m-07a2397d2fc04ea39ca9527e742492ca/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.15
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-07a2397d2fc04ea39ca9527e742492ca
+model_size_bytes: 80719
+model_uuid: m-07a2397d2fc04ea39ca9527e742492ca
+prompts: null
+run_id: 45c1f5376fc74551bb184c2eb286aa9e
+utc_time_created: '2026-06-06 17:33:15.273756'

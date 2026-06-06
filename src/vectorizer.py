@@ -1,12 +1,16 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import pandas as pd
 import mlflow
 import mlflow.sklearn
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score
 from rank_bm25 import BM25Okapi
-from src.preprocessor import TextPreprocessor
+from preprocessor import TextPreprocessor
 
 mlflow.set_tracking_uri("mlruns")
 
@@ -34,7 +38,7 @@ def load_twitter(path="data/raw/training.1600000.processed.noemoticon.csv", n=50
 
 def run_experiment(dataset_name, texts, labels, vectorizer_name, vectorizer):
     preprocessor = TextPreprocessor(PREPROCESSOR_CONFIG)
-    print(f"Preprocessing {dataset_name}...")
+    print(f"Preprocessing {dataset_name} with {vectorizer_name}...")
     processed = [preprocessor.process(str(t)) for t in texts]
 
     X_train, X_test, y_train, y_test = train_test_split(
@@ -56,7 +60,7 @@ def run_experiment(dataset_name, texts, labels, vectorizer_name, vectorizer):
         mlflow.log_metric("accuracy", acc)
         mlflow.sklearn.log_model(model, "model")
 
-        print(f"{dataset_name} | {vectorizer_name} | accuracy: {acc:.4f}")
+        print(f"Done — {dataset_name} | {vectorizer_name} | accuracy: {acc:.4f}")
         return acc, model, vectorizer
 
 if __name__ == "__main__":

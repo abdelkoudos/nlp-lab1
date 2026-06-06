@@ -1,0 +1,9 @@
+artifact_location: file:///c:/Users/DELL/Desktop/nlp lab1/src/../mlruns/548833319466418065
+creation_time: 1780766700405
+effective_trace_archival_retention: null
+experiment_id: '548833319466418065'
+last_update_time: 1780766700405
+lifecycle_stage: active
+name: nlp_lab1_vectorization
+trace_location: null
+workspace: default

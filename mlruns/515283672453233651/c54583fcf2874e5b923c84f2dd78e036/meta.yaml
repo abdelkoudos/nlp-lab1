@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/DELL/Desktop/nlp lab1/mlruns/515283672453233651/c54583fcf2874e5b923c84f2dd78e036/artifacts
+end_time: 1780767174709
+entry_point_name: ''
+experiment_id: '515283672453233651'
+lifecycle_stage: active
+run_id: c54583fcf2874e5b923c84f2dd78e036
+run_name: twitter_BoW
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780767168511
+status: 3
+tags: []
+user_id: DELL

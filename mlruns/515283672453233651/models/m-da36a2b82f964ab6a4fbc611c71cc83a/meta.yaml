@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/DELL/Desktop/nlp lab1/mlruns/515283672453233651/models/m-da36a2b82f964ab6a4fbc611c71cc83a/artifacts
+creation_timestamp: 1780767155724
+experiment_id: '515283672453233651'
+last_updated_timestamp: 1780767157849
+model_id: m-da36a2b82f964ab6a4fbc611c71cc83a
+model_type: null
+name: model
+source_run_id: 6149b1fde64645949600409a692c9ccb
+status: 2
+status_message: null

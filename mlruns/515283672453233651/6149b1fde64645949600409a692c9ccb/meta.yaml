@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/DELL/Desktop/nlp lab1/mlruns/515283672453233651/6149b1fde64645949600409a692c9ccb/artifacts
+end_time: 1780767157892
+entry_point_name: ''
+experiment_id: '515283672453233651'
+lifecycle_stage: active
+run_id: 6149b1fde64645949600409a692c9ccb
+run_name: amazon_TF-IDF
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780767149971
+status: 3
+tags: []
+user_id: DELL

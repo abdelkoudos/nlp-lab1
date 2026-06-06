@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/DELL/Desktop/nlp lab1/mlruns/380637817127213391/971c6b6a46994727abbc3b3fbfe44140/artifacts
+end_time: 1780770478520
+entry_point_name: ''
+experiment_id: '380637817127213391'
+lifecycle_stage: active
+run_id: 971c6b6a46994727abbc3b3fbfe44140
+run_name: production_classifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780770460691
+status: 3
+tags: []
+user_id: DELL

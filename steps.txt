@@ -40,7 +40,7 @@ git commit -m "project scaffold"
 
 git remote set-url origin https://github.com/abdelkoudos/nlp-lab1.git
 git branch -M main
-git push -u origin main
+
 
 git remote set-url origin https://github.com/abdelkoudos/nlp-lab1.git
 git push -u https://abdelkoudos@github.com/abdelkoudos/nlp-lab1.git main
@@ -63,3 +63,7 @@ git rm -r --cached data\raw\database.sqlite
 git add data\raw\database.sqlite.dvc .gitignore
 git commit -m "track large files with DVC"
 git push
+
+mlflow runs
+mlflow uvicorn
+http://127.0.0.1:5000/#/experiments/515283672453233651/runs?searchFilter=&orderByKey=attributes.start_time&orderByAsc=false&startTime=ALL&lifecycleFilter=Active&modelVersionFilter=All+Runs&datasetsFilter=W10%3D
