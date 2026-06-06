@@ -71,3 +71,11 @@ http://127.0.0.1:5000/#/experiments/515283672453233651/runs?searchFilter=&orderB
 git add .
 git commit -m "sentiment classifier, BM25 search engine"
 git push
+
+New-Item Dockerfile 
+uv export --no-hashes > requirements.txt
+docker build -t nlp-lab1 .
+
+git add .
+git commit -m "FastAPI service, Dockerfile"
+git push
