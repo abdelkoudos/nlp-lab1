@@ -79,3 +79,9 @@ docker build -t nlp-lab1 .
 git add .
 git commit -m "FastAPI service, Dockerfile"
 git push
+
+docker run -p 8000:8000 nlp-lab1
+
+{"text": "This coffee is absolutely amazing!"}
+
+{"query": "great coffee taste", "top_k": 3, "sentiment_filter": 1}
